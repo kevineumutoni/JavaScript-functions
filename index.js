@@ -46,3 +46,17 @@ function multiplyByTwo(numbers){
 multiplyByTwo([2,4,3,5,6,7])
 
 //QUESTION 5
+function transformArray(arr){
+    let newArray = []
+    arr.forEach((num, i)=>{
+        if(i<4){
+            newArray.push(num*8)
+        }
+        else if(i>=arr.length -2){
+            newArray.push(num+5)
+        }
+    };
+    else{
+        newArray.push(num)
+    })
+    console.log(newArray);
