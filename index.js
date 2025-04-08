@@ -46,17 +46,19 @@ function multiplyByTwo(numbers){
 multiplyByTwo([2,4,3,5,6,7])
 
 //QUESTION 5
-function transformArray(arr){
-    let newArray = []
-    arr.forEach((num, i)=>{
-        if(i<4){
-            newArray.push(num*8)
-        }
-        else if(i>=arr.length -2){
-            newArray.push(num+5)
-        }
-    };
-    else{
-        newArray.push(num)
-    })
-    console.log(newArray);
+//Write a function that takes 
+// in an array of numbers and consoles the first four items multiplied by 8 and the last two added by 5. Console the array with the new values
+
+function arrayTransform (arr){
+    let empty = []
+    let slicedArray = arr.slice(0,4)
+    let newArray = slicedArray.map(i=> i*8)
+    console.log(newArray)
+    let lastArray = arr.slice(-2)
+    let sumLastArray = lastArray.map(k=> k+5)
+    console.log(sumLastArray)
+    let transformOutput = newArray +" "+ sumLastArray
+    console.log(transformOutput)
+}
+arrayTransform([2,3,4,5,6,7,8,9,10,11,20,24])
+
